@@ -7,6 +7,9 @@ const namePassangers = document.querySelector("#name-passengers")
 const km = kilometriEl.value
 const finalPrice = document.querySelector("#price")
 const typeOf = document.querySelector("#typeOf")
+const nCarrozza = document.querySelector("#numeroCarrozza")
+const codeCp = document.querySelector("#codeCp")
+
 console.log(kilometriEl, etaEl);
 
 
@@ -34,6 +37,8 @@ formEL.addEventListener("submit", function (e) {
     const prezzoLordo = km * 0.21;
     findPrice(eta, prezzoLordo)
     finalPrice.innerHTML = (`${findPrice(eta, prezzoLordo)} €`)
+    nCarrozza.innerHTML = (Math.floor(Math.random() * 10) + 1)
+    codeCp.innerHTML = (Math.floor(Math.random() * 50000) + 1)
 })
 
 /**

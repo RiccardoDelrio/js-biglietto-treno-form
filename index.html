@@ -11,27 +11,58 @@
 
 </head>
 
-<body class="bg-danger">
+<body class="">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary text-primary-emphasis">
+        <div class="container-fluid ">
+            <a class="navbar-brand text-primary-emphasis" href="#">Booleantrain</a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active text-primary-emphasis" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary-emphasis" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary-emphasis" href="#">F.A.Q</a>
+                    </li>
 
-    <h1 class="text-center mb-5 text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-3" type="search" placeholder="Stazione piu vicina"
+                        aria-label="Search">
+                    <button type="button" class="btn btn-outline-secondary">search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center mb-5 mt-5 text-primary-emphasis  ">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
     <form class="form" action="">
 
 
-        <div class="container p-5 m-auto bg-white rounded  ">
-            <div class="row d-flex text-center  p-5">
+        <div class="container p-5 m-auto border border-primary-subtle rounded bg-body-tertiary">
+            <div class="row d-flex text-center  p-5 ">
                 <div class="col-4  ">
-                    <h5 class="text-danger">Nome e Cognome</h5>
-                    <input type="text" class="rounded mt-2 mb-4 p-1 text-center" name="" id="name"
-                        aria-describedby="helpId" placeholder="inserisci nome e cognome" />
+                    <h5 class="text-primary-emphasis">Nome e Cognome</h5>
+                    <input type="text" class=" border border-primary-subtle rounded mt-2 mb-4 p-1 text-center" name=""
+                        id="name" aria-describedby="helpId" placeholder="inserisci nome e cognome" required />
                 </div>
                 <div class="col-4 ">
-                    <h5 class="text-danger">km da percorrere</h5>
-                    <input type="text" class="rounded mt-2 mb-4 p-1 text-center" name="" id="number-of-km"
-                        aria-describedby="helpId" placeholder="inserisci il numero dei km da percorrere" />
+                    <h5 class="text-primary-emphasis">km da percorrere</h5>
+                    <input type="text" class="border border-primary-subtle rounded mt-2 mb-4 p-1 text-center" name=""
+                        id="number-of-km" aria-describedby="helpId"
+                        placeholder="inserisci il numero dei km da percorrere" required />
                 </div>
                 <div class="col-4 ">
-                    <h5 class="text-danger">fascia d'età</h5>
-                    <select class="form-select selettore" aria-label="Default select example">
+                    <h5 class="text-primary-emphasis">fascia d'età</h5>
+                    <select class="form-select selettore border border-primary-subtle"
+                        aria-label="Default select example" required>
 
                         <option value="1">Minorenne</option>
                         <option value="2">maggiorenne</option>
@@ -41,8 +72,8 @@
             </div>
             <div class="row d-flex text-center  p-5">
                 <div class="col-12">
-                    <button type="submit" class="btn btn-secondary calculator me-5">Genera</button>
-                    <button type="submit" class="btn btn-secondary annulla">Annulla</button>
+                    <button type="submit" class="btn btn-outline-primary calculator me-5">Genera</button>
+                    <button type="reset" class="btn btn-outline-primary annulla">Annulla</button>
                 </div>
             </div>
             <div class="result">
@@ -51,31 +82,31 @@
 
         </div>
     </form>
-    <h1 class="text-center mt-4 text-white">IL TUO BIGLIETTO</h1>
+    <h1 class="text-center mt-4 text-primary-emphasis">IL TUO BIGLIETTO</h1>
 
-    <div class="container p-5 m-auto bg-white rounded  ">
+    <div class="container p-5 m-auto border border-primary-subtle rounded bg-body-tertiary">
         <div class="row ">
             <h3>DETTAGLI PASSEGGERI</h3>
-            <div class="col-4 bg-secondary p-3">
-                <h5>NOME PASSEGGERO</h5>
-                <p class="" id="name-passengers"></p>
+            <div class="col-4 bg-secondary bg-opacity-25 rounded p-3">
+                <h5 class="text-center">NOME PASSEGGERO</h5>
+                <p class="fs-2 text-primary-emphasis text-center" id="name-passengers"></p>
             </div>
             <div class="col-8">
                 <div class="row p-3">
                     <div class="col-3">
-                        <h6 class="mb-5">Offerta</h6>
+                        <h6 class="mb-5 text-primary-emphasis">Offerta</h6>
                         <p id="typeOf">-</p>
                     </div>
                     <div class="col-3">
-                        <h6 class="mb-5">Carrozza</h6>
+                        <h6 class="mb-5 text-primary-emphasis">Carrozza</h6>
                         <p id="numeroCarrozza">-</p>
                     </div>
                     <div class="col-3">
-                        <h6 class="mb-5">Codice CP</h6>
+                        <h6 class="mb-5 text-primary-emphasis">Codice CP</h6>
                         <p id="codeCp">-</p>
                     </div>
                     <div class="col-3">
-                        <h6 class="mb-5">Costo biglietto</h6>
+                        <h6 class="mb-5 text-primary-emphasis">Costo biglietto</h6>
                         <p id="price">€</p>
                     </div>
                 </div>
