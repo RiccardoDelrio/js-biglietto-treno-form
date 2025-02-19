@@ -12,49 +12,57 @@
 </head>
 
 <body class="bg-danger">
+
     <h1 class="text-center mb-5 text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    <form class="form" action="">
+
+
+        <div class="container p-5 m-auto bg-white rounded  ">
+            <div class="row d-flex text-center  p-5">
+                <div class="col-4  ">
+                    <h5 class="text-danger">Nome e Cognome</h5>
+                    <input type="text" class="rounded mt-2 mb-4 p-1 text-center" name="" id="name"
+                        aria-describedby="helpId" placeholder="inserisci nome e cognome" />
+                </div>
+                <div class="col-4 ">
+                    <h5 class="text-danger">km da percorrere</h5>
+                    <input type="text" class="rounded mt-2 mb-4 p-1 text-center" name="" id="number-of-km"
+                        aria-describedby="helpId" placeholder="inserisci il numero dei km da percorrere" />
+                </div>
+                <div class="col-4 ">
+                    <h5 class="text-danger">fascia d'età</h5>
+                    <select class="form-select selettore" aria-label="Default select example">
+
+                        <option value="1">Minorenne</option>
+                        <option value="2">maggiorenne</option>
+                        <option value="3">Over 65</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row d-flex text-center  p-5">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-secondary calculator me-5">Genera</button>
+                    <button type="submit" class="btn btn-secondary annulla">Annulla</button>
+                </div>
+            </div>
+            <div class="result">
+
+            </div>
+
+        </div>
+    </form>
+    <h1 class="text-center mt-4 text-white">IL TUO BIGLIETTO</h1>
+
     <div class="container p-5 m-auto bg-white rounded  ">
-        <div class="row d-flex text-center  p-5">
-            <div class="col-4  ">
-                <h5 class="text-danger">Nome e Cognome</h5>
-                <input type="text" class="rounded mt-2 mb-4 p-1 text-center" name="" id="name" aria-describedby="helpId"
-                    placeholder="inserisci nome e cognome" />
+        <div class="row">
+            <h3>DETTAGLI PASSEGGERI</h3>
+            <div class="col-4 bg-secondary">
+                <h5>NOME PASSEGGERO</h5>
+                <p class="name-passengers"></p>
             </div>
-            <div class="col-4 ">
-                <h5 class="text-danger">km da percorrere</h5>
-                <input type="text" class="rounded mt-2 mb-4 p-1 text-center" name="" id="number-of-km"
-                    aria-describedby="helpId" placeholder="inserisci il numero dei km da percorrere" />
-            </div>
-            <div class="col-4 ">
-                <h5 class="text-danger">fascia d'età</h5>
-                <select class="form-select selettore" aria-label="Default select example">
-
-                    <option value="1">Minorenne</option>
-                    <option value="2">maggiorenne</option>
-                    <option value="3">Over 65</option>
-                </select>
-            </div>
+            <div class="col-8"></div>
         </div>
-        <div class="row d-flex text-center  p-5">
-            <div class="col-12">
-                <button class="btn btn-secondary calculator me-5">Genera</button>
-                <button class="btn btn-secondary annulla">Annulla</button>
-
-            </div>
-        </div>
-
-
-
-
-        <input type="text" class="" name="" id="age" aria-describedby="helpId" placeholder="inserisci la tua età" />
-
-
-
-
-
-        <div class="result">
-
-        </div>
+    </div>
 
 
 
@@ -62,12 +70,10 @@
 
 
 
-
-
-        <script src="./main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 </body>
 

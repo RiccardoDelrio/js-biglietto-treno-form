@@ -1,16 +1,18 @@
 const kilometriEl = document.querySelector("#number-of-km")
-//const etaEl = document.querySelector("#age")
+const formEL = document.querySelector(".form")
 const btnEl = document.querySelector(".calculator")
 const etaEl = document.querySelector(".selettore")
 console.log(kilometriEl, etaEl);
-
+const userName = document.querySelector("#name")
+const namePassangers = document.querySelector(".name-passengers")
 const km = kilometriEl.value
 
 
 
 
 
-btnEl.addEventListener("click", function () {
+formEL.addEventListener("submit", function (e) {
+    e.preventDefault()
     const km = kilometriEl.value
     let eta = etaEl.value
     console.log(eta);
@@ -24,7 +26,7 @@ btnEl.addEventListener("click", function () {
     console.log(eta);
     const prezzoLordo = km * 0.21;
     findPrice(eta, prezzoLordo)
-
+    namePassangers.innerHTML = userName
     result.innerHTML = (`${km} ${eta} ${findPrice(eta, prezzoLordo)}`)
 
 })
