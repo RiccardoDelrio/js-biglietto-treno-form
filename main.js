@@ -11,33 +11,34 @@ btnEl.addEventListener("click", function () {
     const km = kilometriEl.value
     const eta = etaEl.value
     console.log(eta, km);
-    findPrice(eta, km)
+    const prezzoLordo = km * 0.21;
+    findPrice(eta, prezzoLordo)
 
 })
-
 /**
  * 
  * @param {age} num 
  * @param {kilometers} num2 
  */
 const findPrice = (num, num2) => {
-    const prezzoLordo = num2 * 0.21;
+
     if (num < 18) {
-        let sconto = (prezzoLordo * 20) / 100;
+        let sconto = (num2 * 20) / 100;
         console.log(sconto);
-        const prezzoNetto = (prezzoLordo - sconto);
+        const prezzoNetto = (num2 - sconto);
         console.log(prezzoNetto.toFixed(2));
-        alert(`${"Il prezzo da pagare è"} ${prezzoNetto.toFixed(2)}`);
+        return prezzoNetto.toFixed(2)
     } else if (num >= 65) {
-        sconto = (prezzoLordo * 40) / 100;
+        sconto = (num2 * 40) / 100;
         console.log(sconto);
-        const prezzoNetto = (prezzoLordo - sconto);
-        console.log(prezzoNetto.toFixed(2));
-        alert(`${"Il prezzo da pagare è"} ${prezzoNetto.toFixed(2)}`);
+        const prezzoNetto = (num2 - sconto);
+        console.log(prezzoNetto.toFixed(2))
+        return prezzoNetto.toFixed(2)
     } else {
-        console.log(prezzoLordo.toFixed(2));
-        alert(`${"Il prezzo da pagare è"} ${prezzoLordo.toFixed(2)}`);
+        console.log(num2.toFixed(2));
+        return num2.toFixed(2)
 
     }
+
 }
 
