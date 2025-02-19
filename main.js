@@ -14,6 +14,8 @@ btnEl.addEventListener("click", function () {
     const prezzoLordo = km * 0.21;
     findPrice(eta, prezzoLordo)
 
+    result.innerHTML = (`${km} ${eta} ${findPrice(eta, prezzoLordo)}`)
+
 })
 /**
  * 
@@ -42,3 +44,4 @@ const findPrice = (num, num2) => {
 
 }
 
+const result = document.querySelector(".result")
