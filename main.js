@@ -1,16 +1,27 @@
 const kilometriEl = document.querySelector("#number-of-km")
-const etaEl = document.querySelector("#age")
+//const etaEl = document.querySelector("#age")
 const btnEl = document.querySelector(".calculator")
+const etaEl = document.querySelector(".selettore")
 console.log(kilometriEl, etaEl);
 
 const km = kilometriEl.value
-const eta = etaEl.value
+
+
+
 
 
 btnEl.addEventListener("click", function () {
     const km = kilometriEl.value
-    const eta = etaEl.value
-    console.log(eta, km);
+    let eta = etaEl.value
+    console.log(eta);
+    if (eta === "1") {
+        eta = 17
+    } else if (eta === "2") {
+        eta = 33
+    } else {
+        eta = 66
+    }
+    console.log(eta);
     const prezzoLordo = km * 0.21;
     findPrice(eta, prezzoLordo)
 
